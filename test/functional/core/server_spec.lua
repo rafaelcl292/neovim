@@ -345,8 +345,8 @@ describe('server', function()
       '-es',
       '--server',
       named_pipe,
-      '--remote-expr',
-      'v:servername',
+      '--remote',
+      '+echo v:servername',
     })
     eq(vim.fs.normalize(named_pipe), res)
     client:close()
